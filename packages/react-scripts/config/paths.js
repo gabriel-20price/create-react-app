@@ -84,6 +84,7 @@ const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath);
 // config before eject: we're in ./node_modules/react-scripts/config/
 module.exports = {
   sharedSrc: resolveApp('shared'),  // shared src between next and react
+  notSharedSrc: resolveApp('src(react)/!shared'),  // components that has common interface between next and react, but need to implement separately
 
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
