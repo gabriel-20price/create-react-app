@@ -751,12 +751,12 @@ module.exports = function (webpackEnv) {
             // as micromatch doesn't match
             // '../cra-template-typescript/template/src/App.tsx'
             // otherwise.
-            '../**/src/**/*.{ts,tsx}',
-            '**/src/**/*.{ts,tsx}',
-            '!**/src/**/__tests__/**',
-            '!**/src/**/?(*.)(spec|test).*',
-            '!**/src/setupProxy.*',
-            '!**/src/setupTests.*',
+            '../**/src(react)/**/*.{ts,tsx}',
+            '**/src(react)/**/*.{ts,tsx}',
+            '!**/src(react)/**/__tests__/**',
+            '!**/src(react)/**/?(*.)(spec|test).*',
+            '!**/src(react)/setupProxy.*',
+            '!**/src(react)/setupTests.*',
           ],
           silent: true,
           // The formatter is invoked directly in WebpackDevServerUtils during development
